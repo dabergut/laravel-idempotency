@@ -1,0 +1,51 @@
+{
+    "name": "dabergut/laravel-idempotency",
+    "description": "Extracting duplicated request handling so you don't have to.",
+    "keywords": ["laravel", "idempotency", "api", "middleware", "duplicate", "requests"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dabergut",
+            "homepage": "https://github.com/dabergut"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0|^12.0",
+        "illuminate/http": "^11.0|^12.0",
+        "illuminate/cache": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^3.0",
+        "phpstan/phpstan": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dabergut\\Idempotency\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dabergut\\Idempotency\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dabergut\\Idempotency\\IdempotencyServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
