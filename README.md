@@ -1,1 +1,1 @@
-# -laravel-idempotency
+# laravel-idempotency
